@@ -28,3 +28,63 @@
     line-height: 20px;
     color: #ffff;
 }
+.maprender{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+grid-template-rows: repeat(auto);
+gap: 2rem;
+padding: 15px;
+text-align: center;
+margin: auto;
+padding: 83px;
+
+}
+.box{
+    /* width: 106%; */
+    border: 1px solid black;
+    height: fit-content;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    border-color: #E1E1E1;
+   
+}
+.innertext{
+    background-color: #FFFFFF;
+    margin-top: 8%;
+    font-size: 14px;
+    font-family: Roboto-serif;
+    line-height: 20px;
+    color: #333333;
+    font-weight: 500;
+}
+.global>:hover{
+    background-color: #F5F5DC;
+}
+.bigbox{
+   
+    height: fit-content;
+    width: 90%;
+}
+.twoinnerbtn{
+    color: black;
+   
+    
+}
+.twoinnerbtn>Button{
+    background-color: yellow;
+}
+.icontag{
+    color: #2874F0;
+}
+.tbicon{
+color: #E1E1E1;
+font-size: 23px;
+padding: 5px;
+}
+.topreads{
+    font-size: 24px;
+    font-family: ROboto-serif;
+    font-weight: 500;
+    line-height: 26px;
+    color: #333333;
+}

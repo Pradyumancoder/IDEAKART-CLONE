@@ -1,0 +1,32 @@
+.box1{
+    width: 90%;
+    padding: 20px;
+    font-family: Roboto-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #333333;
+    text-align: center;
+    padding: 100px;
+   
+}
+
+.s_btn{
+    margin-top: 30px;
+    
+}
+.signup1{
+    font-size: 14px;
+    font-family: Roboto-serif;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333333;
+    padding-left: 20px;
+    position: relative;
+    top: 74px;
+   margin-left: 532px;
+}
+.bada{
+    background-image:  url("https://ideakart.com/assets/youridea-23d18c0fab7fe…4c1dbc419428c71b2014ff742fc52b4006f6b65af6b67.jpg");
+
+}
