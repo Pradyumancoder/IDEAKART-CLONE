@@ -1,0 +1,25 @@
+
+.char{
+    font-family: Roboto-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    font-style: italic;
+    color: #333333;
+}
+.ultag{
+    
+    font-size: 13px;
+    font-family:verdana, arial, helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 18px;
+    color: blue;
+}
+.getnow{
+    font-size: 18px;
+    font-family:Roboto-serif;
+    font-weight: 500;
+    line-height: 20px;
+    color: #333333;
+    
+}
