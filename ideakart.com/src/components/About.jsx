@@ -1,7 +1,9 @@
 import { ChakraProvider, Spacer, Stack, Text } from "@chakra-ui/react";
 import React from "react";
+import Footer from "./Footer";
 function About(){
     return(
+      <>
        <ChakraProvider>
         
 
@@ -31,7 +33,11 @@ We have a user friendly search engine and a quick delivery system.
 </Stack>
         </div>
         
+        <Footer />
+
        </ChakraProvider>
+       
+       </>
     )
 }
 export default About

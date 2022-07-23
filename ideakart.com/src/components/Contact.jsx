@@ -1,6 +1,7 @@
 import { Button, ChakraProvider, Input, Stack } from "@chakra-ui/react";
 import React from "react";
 import styles from "./Contact.module.css"
+import Footer from "./Footer";
 function Contact(){
     return(
         
@@ -37,7 +38,7 @@ function Contact(){
 </div>
 
 
-
+<Footer/>
 </ChakraProvider>
 
     )

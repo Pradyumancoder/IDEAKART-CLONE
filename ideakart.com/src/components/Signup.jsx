@@ -1,6 +1,8 @@
 import {  Button, ChakraProvider, Input, Stack } from "@chakra-ui/react";
 
 import React,{useState} from "react"
+import { Link } from "react-router-dom";
+import Footer from "./Footer";
 import styles from "./Signup.module.css"
 function Signup(){
     const [show] = React.useState  (true)
@@ -29,17 +31,21 @@ function Signup(){
   />
   
 </Stack>
+<Link to ="/Login">
 <div className={styles.s_btn}>
 <Button style={{backgroundColor:"rgb(92,184,92)",color:"#FFFFFF"}}>Sign up</Button>
 </div>
-<div>
-    <h3 style={{color:"blue"}}>Log in</h3>
-</div>
 
+
+<div>
+    <h3 style={{color:"blue",cursor:"pointer"}}>Log in</h3>
+</div>
+</Link>
 
 
 
     </div>
+    <Footer/>
 </ChakraProvider>
     )
 }
