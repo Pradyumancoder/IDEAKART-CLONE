@@ -18,7 +18,11 @@ function Homepage() {
     
     const [isLoading, setLoading] = useState(true)
     const[Data,setData]=useState([])
-
+    const [de,setdd]=useState()
+   
+    const books=[
+        
+    ]
 
 
 
@@ -33,10 +37,8 @@ function Homepage() {
 
     },[])
     console.log(Data)
- const mytimeout=   setTimeout(fun,5000)
-    function fun(el){
-        el.innertext="https://www.fugusau.edu.ng/wp-content/uploads/2021/01/Bubble-Preloader-1-1.gif"
-    }
+
+ 
     
   return  isLoading ? (   //Checkif if is loading
     

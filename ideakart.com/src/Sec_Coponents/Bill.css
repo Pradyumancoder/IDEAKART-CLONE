@@ -1,0 +1,29 @@
+.ele{
+    display: flex;
+    
+    margin-right: 10pc;
+    justify-content: space-between;
+    margin-left: 569px;
+    margin-top: 16px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #333333;
+    font-family:"helvetica neue", Helvetica, Arial, sans-serif;
+}
+.ele1{
+    display: flex;
+    border: 1px solid;
+    margin-right: 10pc;
+    justify-content: space-between;
+    margin-left: 569px;
+    margin-top: 16px;
+    height: 60px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #333333;
+    font-family:"helvetica neue", Helvetica, Arial, sans-serif;  
+    background-color: #F5F5F5; 
+}

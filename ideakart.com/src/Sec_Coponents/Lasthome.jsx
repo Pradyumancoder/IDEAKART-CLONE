@@ -4,6 +4,7 @@ import { Box } from '@chakra-ui/react'
 import {AiFillStar  } from "react-icons/ai"
 import styles from "./Lasthome.module.css"
 import Footer from "../components/Footer";
+import Bill from "./Bill";
 function Lasthome(){
     const property = {
         imageUrl: 'https://images-eu.ssl-images-amazon.com/images/I/51mLwepYDOL.jpg',
@@ -24,7 +25,7 @@ function Lasthome(){
     {/* ********************************************************************* */}
   
     <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
-        <div style={{padding:"10px",marginLeft:"13px",border:"1px solid blue",width:"fit-content"}}><Image src={property.imageUrl}  /></div>
+        <div style={{padding:"10px",marginLeft:"13px",border:"1px solid",width:"fit-content"}}><Image src={property.imageUrl}  /></div>
       
 
       <Box p='6'>
@@ -254,7 +255,9 @@ function Lasthome(){
                 </Box>
                  
                 </Flex>
+
                             </div>
+                            <Bill/>
                             <Footer/>
         </ChakraProvider>
     )
