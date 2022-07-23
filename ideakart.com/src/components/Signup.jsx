@@ -1,6 +1,7 @@
 import {  Button, ChakraProvider, Input, Stack } from "@chakra-ui/react";
 
 import React,{useState} from "react"
+import Footer from "./Footer";
 import styles from "./Signup.module.css"
 function Signup(){
     const [show] = React.useState  (true)
@@ -40,6 +41,7 @@ function Signup(){
 
 
     </div>
+    <Footer/>
 </ChakraProvider>
     )
 }

@@ -11,54 +11,41 @@ import {  ChakraProvider} from '@chakra-ui/react'
 import { useState} from 'react'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import Footer from './Footer'
 
  
 function Homepage() {
+    
+    const [isLoading, setLoading] = useState(true)
     const[Data,setData]=useState([])
+
+
+
 
     const handleData=()=>{
         axios(`https://json-server-mocker-react.herokuapp.com/Data`)
         .then((res)=>setData(res.data))
+        setLoading(false)
     }
-
+        
     useEffect(()=>{
         handleData()
+
     },[])
     console.log(Data)
+ const mytimeout=   setTimeout(fun,5000)
+    function fun(el){
+        el.innertext="https://www.fugusau.edu.ng/wp-content/uploads/2021/01/Bubble-Preloader-1-1.gif"
+    }
     
-  return (
+  return  isLoading ? (   //Checkif if is loading
+    
+     <div  style={{ border:"3px solid red" , width:'50%' , marginTop:'100px ' , height:'50' }} ><img src="https://www.fugusau.edu.ng/wp-content/uploads/2021/01/Bubble-Preloader-1-1.gif" /></div> 
+    ) :(
     <ChakraProvider>
-        <div>
-        
-        <div className={styles.container}>
-        <div>
-        <h1 style={{position:"absolute",left:"174px"}}>IDEAKART</h1> 
-        </div>
-        <div className={styles.fourtext}>
-        <div>
-            <label htmlFor="">About</label>
-        </div>
-        <div>
-            <label htmlFor="">Contact</label>
-        </div>
-        <div>
     
-            <label htmlFor="">Sign IN</label>
-        </div>
         <div>
-            <label htmlFor=""><Link to="/signup">Sign UP</Link></label>
-        </div>
-        </div>
-        </div>
-        <div className={styles.classname}>
-            <input type="search" placeholder='  search' style={{height:"34px",width:"376px"}} />
-            
-        </div>
-        <div>
-            <button style={{background:"red",position:"relative",left:"706px",width: "70px",
-                height:" 35px",top: "-34px"}}>search</button>
-        </div>
-        
+
         <div className={styles.bigbox}>
         <div style={{position:"relative",left:"86px",top:"70px"}}>
             <label className={styles.topreads}>TOP READS</label>
@@ -82,17 +69,19 @@ function Homepage() {
                     <div className={styles.twoinnerbtn}>
                     <hr style={{ border:" 0.01rem solid #E1E1E1"}}/>
                     <Stack direction='row' spacing={0}>
+                    <Link to ="/Lasthome">
                     <Button leftIcon={<BsCartFill />}  variant='' >
                         
                         <div className={styles.icontag}>View Now</div>
                     </Button>
-
+                     </Link>
                     <div className={styles.tbicon}>{<TbMinusVertical/>}</div>
-                     
+                    <Link to ="/Lasthome">
                     <Button leftIcon={<MdOutlineMenuBook />}  variant=''>
                         
                         <div className={styles.icontag}>More details</div>
                     </Button>
+                    </Link>
                     </Stack>
 
                     
@@ -110,7 +99,9 @@ function Homepage() {
 
 
       </div>
+      <Footer/>
     </ChakraProvider>
-  )
-}
+    )
+    }
+    
 export default Homepage

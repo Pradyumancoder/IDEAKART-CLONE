@@ -2,6 +2,7 @@ import { Button, ChakraProvider, Input, Stack } from "@chakra-ui/react";
 import React from "react";
 import styles from "./Login.module.css"
 import { Checkbox, CheckboxGroup } from '@chakra-ui/react'
+import Footer from "./Footer";
 function Login(){
     return(
         <ChakraProvider>
@@ -35,6 +36,7 @@ function Login(){
     
     
         </div>
+        <Footer/>
     </ChakraProvider>
         
     )

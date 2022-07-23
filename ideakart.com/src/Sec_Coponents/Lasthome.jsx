@@ -3,6 +3,7 @@ import React from "react";
 import { Box } from '@chakra-ui/react'
 import {AiFillStar  } from "react-icons/ai"
 import styles from "./Lasthome.module.css"
+import Footer from "../components/Footer";
 function Lasthome(){
     const property = {
         imageUrl: 'https://images-eu.ssl-images-amazon.com/images/I/51mLwepYDOL.jpg',
@@ -57,7 +58,7 @@ function Lasthome(){
         </Box>
 
         <Box>
-         <div style={{backgroundColor:"#9ACD32"}}>
+         <div style={{backgroundColor:"#9ACD32",color:"blue"}}>
         <a href="https://www.amazon.in/Intermittent-Fasting-Keto-Ketogenic-Beginners/dp/1950922901?SubscriptionId=AKIAIUO4VXYJFOFNWAEA&tag=httptopicerco-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1950922901">
         Get Instant Cashback when you pay using Amazon Pay... Click Here
 
@@ -254,6 +255,7 @@ function Lasthome(){
                  
                 </Flex>
                             </div>
+                            <Footer/>
         </ChakraProvider>
     )
 }
