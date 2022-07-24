@@ -6,10 +6,13 @@ import Footer from "./Footer";
 import styles from "./Signup.module.css"
 function Signup(){
     const [show] = React.useState  (true)
-  
+  const handclick=()=>{
+alert("Registration done")
+  }
 
     return(
 <ChakraProvider>
+
     <div><label className={styles.signup1}>Sign up</label></div>
 
     <div className={styles.box1}>
@@ -33,7 +36,9 @@ function Signup(){
 </Stack>
 <Link to ="/Login">
 <div className={styles.s_btn}>
-<Button style={{backgroundColor:"rgb(92,184,92)",color:"#FFFFFF"}}>Sign up</Button>
+<Button onClick={handclick} style={{backgroundColor:"rgb(92,184,92)",color:"#FFFFFF"}}>Sign up
+
+</Button>
 </div>
 
 

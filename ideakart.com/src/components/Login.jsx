@@ -5,6 +5,12 @@ import { Checkbox, CheckboxGroup } from '@chakra-ui/react'
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 function Login(){
+
+     const hadleevernt=()=>{
+        alert("login successful")
+     }
+    
+
     return(
         <ChakraProvider>
         <div><label className={styles.signup1}>Log in</label></div>
@@ -22,10 +28,11 @@ function Login(){
     <Checkbox defaultChecked>Remember me</Checkbox>
     </div>
     
-
+   <Link to="/">
     <div className={styles.s_btn}>
-    <Button style={{backgroundColor:"rgb(92,184,92)",color:"#FFFFFF"}}>Log in</Button>
+    <Button onClick={hadleevernt} style={{backgroundColor:"rgb(92,184,92)",color:"#FFFFFF"}}>Log in</Button>
     </div>
+    </Link>
     <Link to="/Signup">
     
     <div>
