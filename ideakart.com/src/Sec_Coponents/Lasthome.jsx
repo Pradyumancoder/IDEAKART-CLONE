@@ -6,15 +6,10 @@ import styles from "./Lasthome.module.css"
 import Footer from "../components/Footer";
 import Bill from "./Bill";
 function Lasthome(){
-    const property = {
-        imageUrl: 'https://images-eu.ssl-images-amazon.com/images/I/51mLwepYDOL.jpg',
-        text:"Buy it at best price from here",
-        price: 'Rs.815',
-        button:"button",
-        text1: 'write text here',
-        h1_tag:"Boook Specifucation" ,
-        
-      }
+
+  let data=JSON.parse(localStorage.getItem('data'))
+  console.log(data)
+ 
     return(
 
         <ChakraProvider>
@@ -24,166 +19,168 @@ function Lasthome(){
                    
     {/* ********************************************************************* */}
   
-    <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
-        <div style={{padding:"10px",marginLeft:"13px",border:"1px solid",width:"fit-content"}}><Image src={property.imageUrl}  /></div>
-      
+    {data.map((el)=>(
+      <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+      <div style={{padding:"10px",marginLeft:"13px",border:"1px solid",width:"fit-content"}}><Image src={el.img}  /></div>
+    
 
-      <Box p='6'>
-        <Box display='flex' alignItems='baseline'>
-          
-          <Box
-            color='gray.500'
-            fontWeight='semibold'
-            letterSpacing='wide'
-            fontSize='xs'
-            textTransform='uppercase'
-            ml='2'
-          >
-            {/* {property.text} &bull;{property.button}  */}
-            {property.text}
-
-          </Box>
-        </Box>
-
-        <Box
-          mt='1'
-          fontWeight='semibold'
-          as='h4'
-          lineHeight='tight'
-          noOfLines={1}
-        >
-          {property.price} &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp; <button style={{backgroundColor:"#EC971F"}}>Buy Now</button>
-        </Box>
-
-        <Box>
-         <div style={{backgroundColor:"#9ACD32",color:"blue"}}>
-        <a href="https://www.amazon.in/Intermittent-Fasting-Keto-Ketogenic-Beginners/dp/1950922901?SubscriptionId=AKIAIUO4VXYJFOFNWAEA&tag=httptopicerco-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1950922901">
-        Get Instant Cashback when you pay using Amazon Pay... Click Here
-
-        </a>
-         </div>
+    <Box p='6'>
+      <Box display='flex' alignItems='baseline'>
         
+        <Box
+          color='gray.500'
+          fontWeight='semibold'
+          letterSpacing='wide'
+          fontSize='xs'
+          textTransform='uppercase'
+          ml='2'
+        >
+          {/* {data.text} &bull;{data.button}  */}
+          {el.text}
+
         </Box>
+      </Box>
 
-        <Box display='flex'  alignItems='center'>
+      <Box
+        mt='1'
+        fontWeight='semibold'
+        as='h4'
+        lineHeight='tight'
+        noOfLines={1}
+      >
+        {el.price} &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp; <button style={{backgroundColor:"#EC971F"}}>Buy Now</button>
+      </Box>
+
+      <Box>
+       <div style={{backgroundColor:"#9ACD32",color:"blue"}}>
+      <a href="https://www.amazon.in/Intermittent-Fasting-Keto-Ketogenic-Beginners/dp/1950922901?SubscriptionId=AKIAIUO4VXYJFOFNWAEA&tag=httptopicerco-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1950922901">
+      Get Instant Cashback when you pay using Amazon Pay... Click Here
+
+      </a>
+       </div>
+      
+      </Box>
+
+      <Box display='flex'  alignItems='center'>
+        
+        <Box as='span' color='gray.600' fontSize='sm'>
           
-          <Box as='span' color='gray.600' fontSize='sm'>
-            {property.h1_tag}
-            
-             <Flex minWidth='max-content' alignItems='center' gap='3'>
-            <Box p='2'>
-                <Heading size='md'>Binding</Heading>
-               
-            </Box>
-            <Spacer />
-            <ButtonGroup>
-            <Heading size='md'>Paperback</Heading>
-            
-              
-            </ButtonGroup>
-            </Flex>
-            
-            <Flex minWidth='max-content' alignItems='center' gap='3'>
-            <Box p="2">
-                <Heading size='md'>Language</Heading>
-               
-            </Box>
-            <Spacer />
-            <ButtonGroup >
-            <Heading size='md'>English</Heading>
-            
-              
-            </ButtonGroup>
-            </Flex>
+          
+           <Flex minWidth='max-content' alignItems='center' gap='3'>
+          <Box p='2'>
+              <Heading size='md'>Binding</Heading>
              
-            <Flex minWidth='max-content' alignItems='center' >
-            <Box p='2'>
-                <Heading size='md'>Number of Pages</Heading>
-               
-            </Box>
-            <Spacer />
-            <ButtonGroup >
-            <Heading size='md'>214</Heading>
-            
-              
-            </ButtonGroup>
-            </Flex>
-
-            <Flex minWidth='max-content' alignItems='center' gap='3'>
-            <Box p='2'>
-                <Heading size='md'>Author</Heading>
-               
-            </Box>
-            <Spacer />
-            <ButtonGroup >
-            <Heading size='md'>Elizabeth Moore</Heading>
-            
-              
-            </ButtonGroup>
-            </Flex>
-
-
-            <Flex minWidth='max-content' alignItems='center' gap='3'>
-            <Box p='2'>
-                <Heading size='md'>Publisher</Heading>
-               
-            </Box>
-            <Spacer />
-            <ButtonGroup gap='2'>
-            <Heading size='md'>Bravex Publication</Heading>
-            
-              
-            </ButtonGroup>
-            </Flex>
-
-
-            <Flex minWidth='max-content' alignItems='center' gap='10'>
-            <Box p='2'>
-                <Heading size='md'>Isbn-10</Heading>
-               
-            </Box>
-            <Spacer />
-            <ButtonGroup gap='2'>
-            <Heading size='md'>183784783777</Heading>
-            
-              
-            </ButtonGroup>
-            </Flex>
-
-
-            <Flex minWidth='max-content' alignItems='center' gap='10'>
-            <Box p='2'>
-                <Heading size='md'>Isbn-13</Heading>
-               
-            </Box>
-            <Spacer />
-            <ButtonGroup gap='2'>
-            <Heading size='md'>89898098008089</Heading>
-            
-              
-            </ButtonGroup>
-            </Flex>
-
-            <Flex minWidth='max-content' alignItems='center' gap='10'>
-            <Box p='2'>
-                <Heading size='md'>Dimension</Heading>
-               
-            </Box>
-            <Spacer />
-            <ButtonGroup gap='7'>
-            <Heading size='md'>15.24*1.35*22.86</Heading>
-            
-              
-            </ButtonGroup>
-            </Flex>
-            
           </Box>
+          <Spacer />
+          <ButtonGroup>
+          <Heading size='md'>Paperback</Heading>
+          
+            
+          </ButtonGroup>
+          </Flex>
+          
+          <Flex minWidth='max-content' alignItems='center' gap='3'>
+          <Box p="2">
+              <Heading size='md'>Language</Heading>
+             
+          </Box>
+          <Spacer />
+          <ButtonGroup >
+          <Heading size='md'>English</Heading>
+          
+            
+          </ButtonGroup>
+          </Flex>
+           
+          <Flex minWidth='max-content' alignItems='center' >
+          <Box p='2'>
+              <Heading size='md'>Number of Pages</Heading>
+             
+          </Box>
+          <Spacer />
+          <ButtonGroup >
+          <Heading size='md'>214</Heading>
+          
+            
+          </ButtonGroup>
+          </Flex>
+
+          <Flex minWidth='max-content' alignItems='center' gap='3'>
+          <Box p='2'>
+              <Heading size='md'>Author</Heading>
+             
+          </Box>
+          <Spacer />
+          <ButtonGroup >
+          <Heading size='md'>Elizabeth Moore</Heading>
+          
+            
+          </ButtonGroup>
+          </Flex>
+
+
+          <Flex minWidth='max-content' alignItems='center' gap='3'>
+          <Box p='2'>
+              <Heading size='md'>Publisher</Heading>
+             
+          </Box>
+          <Spacer />
+          <ButtonGroup gap='2'>
+          <Heading size='md'>Bravex Publication</Heading>
+          
+            
+          </ButtonGroup>
+          </Flex>
+
+
+          <Flex minWidth='max-content' alignItems='center' gap='10'>
+          <Box p='2'>
+              <Heading size='md'>Isbn-10</Heading>
+             
+          </Box>
+          <Spacer />
+          <ButtonGroup gap='2'>
+          <Heading size='md'>183784783777</Heading>
+          
+            
+          </ButtonGroup>
+          </Flex>
+
+
+          <Flex minWidth='max-content' alignItems='center' gap='10'>
+          <Box p='2'>
+              <Heading size='md'>Isbn-13</Heading>
+             
+          </Box>
+          <Spacer />
+          <ButtonGroup gap='2'>
+          <Heading size='md'>89898098008089</Heading>
+          
+            
+          </ButtonGroup>
+          </Flex>
+
+          <Flex minWidth='max-content' alignItems='center' gap='10'>
+          <Box p='2'>
+              <Heading size='md'>Dimension</Heading>
+             
+          </Box>
+          <Spacer />
+          <ButtonGroup gap='7'>
+          <Heading size='md'>15.24*1.35*22.86</Heading>
+          
+            
+          </ButtonGroup>
+          </Flex>
+          
         </Box>
       </Box>
     </Box>
+  </Box>
+    ))}
   
 
                     {/* ************************************************************ */}
