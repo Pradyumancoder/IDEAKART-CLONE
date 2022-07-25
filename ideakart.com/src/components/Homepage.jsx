@@ -13,6 +13,9 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from './Footer'
 
+// https://ideakart-39f3x58eb-pradyumancoder.vercel.app/
+
+
  
 function Homepage() {
     
@@ -28,8 +31,11 @@ function Homepage() {
 
     const handleData=()=>{
         axios(`https://json-server-mocker-react.herokuapp.com/Data`)
-        .then((res)=>setData(res.data))
-        setLoading(false)
+        .then((res)=>{
+            setData(res.data)
+            setLoading(false)
+        })
+        // .catch(()=>setLoading(true))
     }
         
     useEffect(()=>{
@@ -37,12 +43,17 @@ function Homepage() {
 
     },[])
     console.log(Data)
+    let arr=[]
+const movedata=(img,price,text)=>{
+    arr.push({img,price,text})
+    localStorage.setItem('data',JSON.stringify(arr))
+}
 
  
     
   return  isLoading ? (   //Checkif if is loading
     
-     <div  style={{ border:"3px solid red" , width:'50%' , marginTop:'100px ' , height:'50' }} ><img src="https://www.fugusau.edu.ng/wp-content/uploads/2021/01/Bubble-Preloader-1-1.gif" /></div> 
+     <div  style={{width:'50%' , marginTop:'100px' ,textAlign:"center" ,height:'50' }} ><img src="https://cdn.dribbble.com/users/148670/screenshots/5252136/media/e7019e9ad90430ab0e796f38c8c7baa0.gif" alt="" /> </div> 
     ) :(
     <ChakraProvider>
     
@@ -74,7 +85,7 @@ function Homepage() {
                     <Link to ="/Lasthome">
                     <Button leftIcon={<BsCartFill />}  variant='' >
                         
-                        <div className={styles.icontag}>View Now</div>
+                        <div className={styles.icontag} onClick={()=>movedata(el.lazy_src,el.price,el.color_text)}>View Now</div>
                     </Button>
                      </Link>
                     <div className={styles.tbicon}>{<TbMinusVertical/>}</div>
