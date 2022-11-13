@@ -1,2 +1,2 @@
 Ideakarkt.com 
-delploylink-
+delploylink-https://ideakart-com-pradyumancoder.vercel.app/
