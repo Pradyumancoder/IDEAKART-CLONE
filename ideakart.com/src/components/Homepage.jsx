@@ -15,6 +15,7 @@ import Footer from './Footer'
 
 // https://ideakart-39f3x58eb-pradyumancoder.vercel.app/
 
+// https://ideakartmocker.onrender.com/Data
 
  
 function Homepage() {
@@ -30,7 +31,7 @@ function Homepage() {
 
 
     const handleData=()=>{
-        axios(`https://json-server-mocker-react.herokuapp.com/Data`)
+        axios(`https://ideakartmocker.onrender.com/Data`)
         .then((res)=>{
             setData(res.data)
             setLoading(false)
@@ -49,7 +50,10 @@ const movedata=(img,price,text)=>{
     localStorage.setItem('data',JSON.stringify(arr))
 }
 
- 
+// "id": 1,
+// "imgUrl": "https://images-eu.ssl-images-amazon.com/images/I/41u5vbuEwtL.jpg",
+// "title": "The Efficiency Paradox",
+// "price": 374
     
   return  isLoading ? (   //Checkif if is loading
     
@@ -68,16 +72,12 @@ const movedata=(img,price,text)=>{
                 {
                 Data.map((el)=>(
                    <div className={styles.box}>
-                   <img style={{display:"flex",padding:"13px"}} src={el.lazy_src} />
-
-
-
-
+                   <img style={{display:"flex",padding:"13px"}} src={el.imgUrl} />
                     <div className={styles.global}>
                     <div className={styles.innertext}>
                     <p style={{color:"#65655F"}}>{el.price}</p>
                     {/* <label>{el.photo_href}</label> */}
-                    <h2 style={{color:"rgb(23,154,216)",marginRight:"267px"}}>{el.color_text}</h2>
+                    <h2 style={{color:"rgb(23,154,216)",marginRight:"267px"}}>{el.title}</h2>
 
                     <div className={styles.twoinnerbtn}>
                     <hr style={{ border:" 0.01rem solid #E1E1E1"}}/>
@@ -85,7 +85,7 @@ const movedata=(img,price,text)=>{
                     <Link to ="/Lasthome">
                     <Button leftIcon={<BsCartFill />}  variant='' >
                         
-                        <div className={styles.icontag} onClick={()=>movedata(el.lazy_src,el.price,el.color_text)}>View Now</div>
+                        <div className={styles.icontag} onClick={()=>movedata(el.imgUrl,el.price,el.title)}>View Now</div>
                     </Button>
                      </Link>
                     <div className={styles.tbicon}>{<TbMinusVertical/>}</div>
